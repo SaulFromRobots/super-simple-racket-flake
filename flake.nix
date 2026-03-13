@@ -57,6 +57,7 @@
             packages = [
               selfPackages.racket-with-envs
               selfPackages.racket-langserver-env
+              selfPackages.racket-langserver-bin
             ];
             shellHook = ''
               source ${selfPackages.racket-langserver-env}/.venv/activate.sh
