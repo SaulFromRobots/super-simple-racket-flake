@@ -56,6 +56,15 @@ rec {
     ];
   };
 
+  fixw = {
+    src = fetchgit {
+      url = "https://github.com/6cdh/racket-fixw";
+      rev = "b93ec4e13223533b1897e269f2245bad16fe3c45";
+      hash = "sha256-PC+JTSmgz+LSQTasEAKXWidu1bOUroMtBoOeHMgpV5U=";
+    };
+    infos = [ { name = "fixw"; } ];
+  };
+
   racket-langserver = {
     src = fetchgit {
       url = "https://github.com/jeapostrophe/racket-langserver";
@@ -66,6 +75,7 @@ rec {
     dependencies = [
       html-parsing
       chk-lib
+      fixw
     ];
   };
 
